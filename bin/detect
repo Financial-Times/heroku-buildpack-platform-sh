@@ -1,11 +1,12 @@
-#!/usr/bin/env bash
-# bin/detect <build-dir>
+#!/usr/bin/bash
 
-echo has_php=$(command -v php)
-if [ -z $has_php ]; then
-    echo "Could not find and installed php version. Can not install platform.sh wihtout php installed." >&2
-    exit 1
-else
-    echo "Platform.sh CLI"
-    exit 0
-fi
+echo "Platform.sh CLI"
+exit 0
+# echo has_php=$(command -v php)
+# if [ -z $has_php ]; then
+#     echo "Could not find and installed php version. Can not install platform.sh wihtout php installed." >&2
+#     exit 1
+# else
+#     echo "Platform.sh CLI"
+#     exit 0
+# fi
