@@ -1,7 +1,5 @@
 #!/usr/bin/bash
 
-BUILD_DIR=$1
-
 function indent() {
     c='s/^/       /'
     case $(uname) in
@@ -18,8 +16,8 @@ topic "Downloading Platfrom.sh cli"
 curl -sS https://platform.sh/cli/installer | php | indent
 
 topic "Creating source file"
-mkdir -p $BUILD_DIR/.profile.d
-new_source_file=$BUILD_DIR/.profile.d/platformsh.sh
+mkdir -p $HOME/.profile.d
+new_source_file=$HOME/.profile.d/platformsh.sh
 touch $new_source_file
 chmod +x $new_source_file
 echo 'export PATH="$HOME/"'\''.platformsh/bin'\'':"$PATH"' > $new_source_file
