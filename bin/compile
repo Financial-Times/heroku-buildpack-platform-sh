@@ -25,5 +25,5 @@ echo 'export PATH="$HOME/"'\''.platformsh/bin'\'':"$PATH"' > $new_source_file
 topic "Adding keys to known_hosts"
 mkdir -p $HOME/.ssh
 test -f $HOME/.ssh/known_hosts|| touch  $HOME/.ssh/known_hosts
-ssh-keyscan 'ssh.eu-2.platform.sh' >> $HOME/.ssh/known_hosts
-ssh-keyscan 'git.eu-2.platform.sh' >> $HOME/.ssh/known_hosts
+ssh-keyscan 'ssh.eu-2.platform.sh' >> $HOME/.ssh/known_hosts | indent
+ssh-keyscan 'git.eu-2.platform.sh' >> $HOME/.ssh/known_hosts | indent
