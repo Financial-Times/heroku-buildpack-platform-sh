@@ -46,6 +46,8 @@ function add_ssh_known_hosts() {
     test -f $build_dir/.ssh/known_hosts || touch  $build_dir/.ssh/known_hosts
     ssh-keyscan 'ssh.eu-2.platform.sh' >> $build_dir/.ssh/known_hosts
     ssh-keyscan 'git.eu-2.platform.sh' >> $build_dir/.ssh/known_hosts
+    ssh-keyscan 'ssh.eu.platform.sh' >> $build_dir/.ssh/known_hosts
+    ssh-keyscan 'git.eu.platform.sh' >> $build_dir/.ssh/known_hosts
 }
 
 install_platform_cli $build_dir
