@@ -23,11 +23,11 @@ function install_platform_cli() {
     topic "Downloading Platfrom.sh cli"
 
     curl -sS https://platform.sh/cli/installer | php | indent
-    mv "$HOME/.platformsh" "$build_dir/.heroku/.platformsh"
-    chmod +x "$build_dir/.heroku/.platformsh/bin/platform"
+    mv "$HOME/.platformsh" "$build_dir/.platformsh"
+    chmod +x "$build_dir/.platformsh/bin/platform"
 }
 
-# Add .sh fie in .profile.d so that platform is automatically sourced when the heroku app is started
+# Add .sh file in .profile.d so that platform is automatically sourced when the heroku app is started
 function write_profile() {
     local build_dir=$1
     topic "Creating source file"
