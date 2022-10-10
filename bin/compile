@@ -34,7 +34,7 @@ function write_profile() {
 
     mkdir -p "$build_dir/.profile.d"
     new_source_file="$build_dir/.profile.d/platformsh_cli.sh"
-    echo "export PATH=\"$HOME/.heroku/.platformsh/bin:\$PATH\"" > $new_source_file
+    echo "export PATH=\"$HOME/.platformsh/bin:\$PATH\"" > $new_source_file
 }
 
 # Manually add ssh keys to known_hosts to prevent question for unestablished authenticity of host
