@@ -17,6 +17,10 @@ function topic() {
   echo "-----> $*"
 }
 
+function show_envs() {
+    env | topic
+}
+
 # .heroku is the dir where builpacks are persisted
 function install_platform_cli() {
     local build_dir=$1
@@ -50,6 +54,7 @@ function add_ssh_known_hosts() {
     ssh-keyscan 'git.eu.platform.sh' >> $build_dir/.ssh/known_hosts
 }
 
+show_envs
 install_platform_cli $build_dir
 write_profile $build_dir
 add_ssh_known_hosts $build_dir
